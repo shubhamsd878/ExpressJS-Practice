@@ -1,0 +1,33 @@
+html 
+    head 
+        title = 'Hello Pug'
+    body
+        
+        include ./header.pug
+
+        br
+        br
+
+        h1.greeting#people(width = '10px' height = '100') Templating Value Transfer name= #{user.name} &amp; age= #{user.age}
+        p
+            | pipe for multiple lines 
+            br
+            | The line next after it is comment #{user.age}
+            //| sldjflk
+            br
+            br
+        
+        div 
+            | 1. direct from static root folder 
+            | 2. from another root folder. to show multiple root folder
+            | 3. declared public3 as virtual_path_prefix
+        img(src='/Test_image.jpg', width='25%s', alt="test-image")
+        img(src='/public2_Test_image.jpg', width='25%s', alt="test-image")      
+        // above image : if diff root folder
+
+        img(src='/virtual_path_prefix/public3_Test_image.jpg', width='25%s', alt="test-image")      
+
+        br
+        br
+        include ./footer.pug
+        

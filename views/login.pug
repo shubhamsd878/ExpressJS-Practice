@@ -1,0 +1,12 @@
+//- for index_09_authentication
+html    
+    title Log in! 
+body
+    h4 Log in!
+    if(message)
+        //- h3 #{message} 
+    form(action='/login' method= 'post')
+        input(type="text" name="id" required placeholder='User id')
+        input(type="text" name="password" required placeholder='Password')
+        input(type="submit" required placeholder='Password' value = 'hello')
+        //- button(type='submit' value="hello")
